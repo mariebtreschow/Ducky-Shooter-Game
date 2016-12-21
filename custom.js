@@ -9,7 +9,14 @@ function createDucks(count) {
 var delay = 0;
 
 for(var i = 0; i < count; i++) {
-   var duck = $('<img src="ducky.png">')
+   var duck = $('<img src="ducky.png">');
+
+   duck.css({
+           position: 'absolute',
+           left: 0,
+           top: '25%',
+           width: '150px'
+      })
    }
 }
 
