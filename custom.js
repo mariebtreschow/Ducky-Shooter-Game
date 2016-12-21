@@ -17,9 +17,9 @@ for(var i = 0; i < count; i++) {
            width: '150px'
       });
 
+      delay = delay + 800;
       duck.appendTo('#duck');
-      dealy = delay + 800;
-      duck.hide().duck(delay).show(1).animate({'left':screenWidth}, {
+      duck.hide().delay(delay).show(1).animate({'left':screenWidth}, {
          duration: 5000,
          easing: "linear",
          complete: function() {
@@ -31,10 +31,6 @@ for(var i = 0; i < count; i++) {
       });
    }
 }
-
-
-
-//running the function
 
 $(document).ready(function() {
    createDucks(20);
