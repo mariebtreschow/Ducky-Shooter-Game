@@ -1,9 +1,10 @@
 html {
    cursor: url('crosshair.png'), auto;
+   height: 100%;
 }
 
 body {
-   background-image: url('pond.jpg') no-repeat;
+   background-image: url('pond.jpg');
    background-size: cover;
    overflow: hidden;
 }
@@ -11,4 +12,11 @@ body {
 #container {
    width: 100%;
    height: 100%;
+}
+
+h1 {
+   text-align: center;
+   color: white;
+   font-size: 100px;
+   font-family: 'Open Sans', sans-serif;
 }

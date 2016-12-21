@@ -13,7 +13,7 @@ for(var i = 0; i < count; i++) {
    duck.css({
            position: 'absolute',
            left: 0,
-           top: '25%',
+           top: '35%',
            width: '150px'
       });
 
