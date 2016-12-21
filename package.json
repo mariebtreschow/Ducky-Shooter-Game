@@ -1,0 +1,11 @@
+{
+  "name": "duckygame",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/mariebtreschow/ducky-shooter-game.git",
+    "type": "git"
+  },
+  "author": "Marie Treschow <treschow.marie@gmail.com>",
+  "license": "MIT"
+}
