@@ -8,10 +8,10 @@ var delay = 0;
 for(var i = 0; i < count; i++) {
    var duck = $('<img src="ducky.jpg">');
    duck.css({
-           position: 'absolute',
-           left: 0,
-           top: '35%',
-           width: 50 + 200 * Math.random(i * 100) + 'px'
+         position: 'absolute',
+         left: 0,
+         top: '35%',
+         width: 50 + 200 * Math.random(i * 100) + 'px'
       });
 
       duck.appendTo('#duck');
@@ -19,11 +19,11 @@ for(var i = 0; i < count; i++) {
 
       duck.hide().delay(delay).show(1).animate({
          'left': screenWidth
-            }, {
-            duration: 3000,
-            easing: "linear",
-            complete: function() {
-                $(this).remove()
+         }, {
+         duration: 3000,
+         easing: "linear",
+         complete: function() {
+          $(this).remove()
          }
       });
       duck.click(function () {
