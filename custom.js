@@ -2,7 +2,6 @@
 //variable screenWidth
 var screenWidth = $(document).width();
 
-
 //function to create the ducks
 
 function createDucks(count) {
@@ -27,6 +26,10 @@ for(var i = 0; i < count; i++) {
          }
       });
       duck.click(function () {
+         var audioElement = document.createElement('audio');
+         audioElement.setAttribute('src', 'Quack Quack-SoundBible.com-620056916.mp3');
+
+            audioElement.play();
             $(this).remove()
       });
    }
