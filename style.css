@@ -20,3 +20,8 @@ h1 {
    font-size: 100px;
    font-family: 'Open Sans', sans-serif;
 }
+
+div {
+  -webkit-transition: all 600ms easing’s Bezier curve;
+  transition:         all 600ms easing’s Bezier curve;
+}
