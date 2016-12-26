@@ -1,5 +1,4 @@
 
-//read-only property returns the layout width of an element
 var screenWidth = document.body.offsetWidth;
 
 function createDucks(count) {
@@ -14,7 +13,7 @@ for(var i = 0; i < count; i++) {
          width: 50 + 200 * Math.random(i * 100) + 'px'
       });
 
-      duck.appendTo('#duck');
+      duck.appendTo('.duck');
       delay += 900;
 
       duck.hide().delay(delay).show(1).animate({
@@ -42,7 +41,7 @@ $(document).ready(function() {
    var missCounter= 0;
 
    $(document).on('click', function(event) {
-   if ($(event.target).hasClass('duck')) {
+   if ($(event.target).hasClass('.duck')) {
       counter++;
       $(event.target).css({ opacity: 0 });
    } else {
