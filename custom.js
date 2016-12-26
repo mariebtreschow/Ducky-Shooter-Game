@@ -41,16 +41,13 @@ $(document).ready(function() {
    var counter = 0;
    var missCounter= 0;
 
-   var result = $('<h5 />').appendTo($('.container'));
-
-   $(document).on('click', function(e) {
-   if ($(e.target).hasClass('duck')) {
+   $(document).on('click', function(event) {
+   if ($(event.target).hasClass('duck')) {
       counter++;
-      $(e.target).css({ opacity: 0 });
+      $(event.target).css({ opacity: 0 });
    } else {
       missCounter++;
    }
-   console.log(counter, missCounter);
-
+      console.log('Ducks you shot:' + counter, 'Ducks you missed:' + missCounter);
    });
 });
