@@ -38,4 +38,19 @@ for(var i = 0; i < count; i++) {
 
 $(document).ready(function() {
    createDucks(30);
+   var counter = 0;
+   var missCounter= 0;
+
+   var result = $('<h5 />').appendTo($('.container'));
+
+   $(document).on('click', function(e) {
+   if ($(e.target).hasClass('duck')) {
+      counter++;
+      $(e.target).css({ opacity: 0 });
+   } else {
+      missCounter++;
+   }
+   console.log(counter, missCounter);
+
+   });
 });
