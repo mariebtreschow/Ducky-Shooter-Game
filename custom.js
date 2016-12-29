@@ -2,7 +2,10 @@
 var screenWidth = document.body.offsetWidth;
 
 function createDucks(count) {
+
 var delay = 0;
+var hitCount = 0;
+var missCount = 0;
 
 for(var i = 0; i < count; i++) {
    var duck = $('<img src="ducky.jpg">');
@@ -12,10 +15,9 @@ for(var i = 0; i < count; i++) {
          top: '35%',
          width: 50 + 200 * Math.random(i * 100) + 'px'
       });
-
-      duck.appendTo('.duck');
       delay += 900;
 
+      duck.appendTo('.duck');
       duck.hide().delay(delay).show(1).animate({
          'left': screenWidth
          }, {
@@ -23,30 +25,23 @@ for(var i = 0; i < count; i++) {
          easing: "linear",
          complete: function() {
           $(this).remove();
+          missCount++;
          }
       });
+
       duck.click(function() {
          var audioElement = document.createElement('audio');
-         audioElement.setAttribute('src', 'Quack Quack-SoundBible.com-620056916.mp3');
 
+         audioElement.setAttribute('src', 'Quack Quack-SoundBible.com-620056916.mp3');
          audioElement.play();
          $(this).remove();
+         hitCount++;
       });
    }
 }
 
 $(document).ready(function() {
    createDucks(30);
-   var counter = 0;
-   var missCounter= 0;
 
-   $(document).on('click', function(event) {
-   if ($(event.target).hasClass('.duck')) {
-      counter++;
-   $(event.target).css({ opacity: 0 });
-   } else {
-      missCounter++;
-   }
-      console.log('Ducks you shot:' + counter, 'Ducks you missed:' + missCounter);
-   });
+   console.log(hitCount, missCount);
 });
